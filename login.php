@@ -10,14 +10,15 @@
     </head>
     <body>
         <main>
-            <img src="./img/logo_horizonta_fundo_branco.png" alt="imagem">
+            <img src="./img/logo_horizonta_fundo_branco.png" alt="imagem" id="logo">
             <p><b>Bem-vindo</b></p>
-            <form action="autenticar.php" method="post">
+            <form name="formulario" action="autenticar.php" method="POST">
                 <label>E-mail</label>
                 <input type="email" name="email" id="email" placeholder="Insira seu login" />
                 <label>Senha</label>
                 <input type="password" name="senha" id="senha" placeholder="Insira sua senha" />
-                <input type="submit" value="Login" id="login" onclick>
+                <img id="icone">
+                <input type="submit" value="Login" id="login" onclick="return validar()" >
             </form>
         </main>
     </body>
