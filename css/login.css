@@ -21,7 +21,7 @@ main{
 p{
     text-align: left;
     font-size: 19px;
-     margin-top: 56.5px;
+    margin-top: 56.5px;
     margin-left: 86.5px;
 }
 form{
@@ -53,6 +53,7 @@ input{
     margin-left: 90px;
     margin-top: 98px;
     font-size: 13px;
+    cursor: pointer;
 }
 #icone{
     margin-top: -33px;
