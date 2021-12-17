@@ -16,13 +16,34 @@
                 <img src="./img/logo_horizonta_fundo_branco.png" alt="logotipo">
             </div>
             <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Jhonatan Torres
-                    <span class="caret"></span>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Jhonatan Torres
                 </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Sair</a></li>
-                </ul>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">Sair</button>
+                </div>
             </div>
         </header>
+        <section>
+            <div class="menu_lateral">
+                <p>clientes</p>
+            </div>
+            <div>
+                <div>
+                    <p>clientes</p>
+                    <button>+</button>
+                </div>
+                <table>
+                    <tr>
+                        <td>nome compelto</td>
+                        <td>cpf</td>
+                        <td>celular</td>
+                        <td>email</td>
+                        <td>status</td>
+                        <td>acao</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
     </body>
 </html>

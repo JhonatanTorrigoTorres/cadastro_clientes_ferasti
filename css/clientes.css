@@ -1,20 +1,38 @@
-*{
+body,html{
     margin: 0;
+    height: 100vh;
 }
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: brown;
-    
 }
 .logo{
     background-color: #3C3A3C;
     width: 234px;
-    height: 54px;
+    height: 50.47px;
 }
 .logo img{
     width: 109px;
     height: 37px;
-    background-color: rebeccapurple;
+}
+.dropdown{
+    background-color: springgreen;
+    height: 50.47px;
+}
+.dropdown button{
+    height: 34.25px;
+    width: 146.69px;
+    margin-right: 11.6px;
+}
+ul{
+    background-color: springgreen;
+}
+section{
+    display: flex;
+    flex-direction: row;
+}
+.menu_lateral{
+    height: 100vh;
+    width: 234px;
+    background-color: #E0E0E0;
 }
