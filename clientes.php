@@ -17,30 +17,31 @@
             </div>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Jhonatan Torres
+                    <b>Jhonatan Torres</b>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item" type="button">Sair</button>
+                    <a href="">Sair</a>
                 </div>
             </div>
         </header>
         <section>
             <div class="menu_lateral">
-                <p>clientes</p>
+                <img src="./img/usuario.png" alt="icone">
+                <p><b>Clientes</b></p>
             </div>
-            <div>
-                <div>
-                    <p>clientes</p>
-                    <button>+</button>
+            <div class="principal">
+                <div class="topo_tabela">
+                    <p><b>Clientes</b></p>
+                    <a href=""><b>+</b></a>
                 </div>
                 <table>
                     <tr>
-                        <td>nome compelto</td>
-                        <td>cpf</td>
-                        <td>celular</td>
-                        <td>email</td>
-                        <td>status</td>
-                        <td>acao</td>
+                        <td><b>NOME COMPLETO</b></td>
+                        <td><b>CPF</b></td>
+                        <td><b>CELULAR</b></td>
+                        <td><b>E-MAIL</b></td>
+                        <td><b>STATUS</b></td>
+                        <td><b>AÇÃO</b></td>
                     </tr>
                 </table>
             </div>

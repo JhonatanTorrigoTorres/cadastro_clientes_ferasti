@@ -1,38 +1,108 @@
 body,html{
-    margin: 0;
-    height: 100vh;
+    height: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
 }
 header{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .logo{
     background-color: #3C3A3C;
-    width: 234px;
+    width: 12%;
     height: 50.47px;
 }
 .logo img{
     width: 109px;
     height: 37px;
+    margin-left:25%;
+    margin-top: 4.73px;
 }
 .dropdown{
-    background-color: springgreen;
     height: 50.47px;
 }
 .dropdown button{
     height: 34.25px;
     width: 146.69px;
-    margin-right: 11.6px;
+    margin-right: 20px;
+    text-align: left;
+    font-size: 13px;
+    background-color: white;
 }
-ul{
-    background-color: springgreen;
+.dropdown-menu{
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 17px;
+}
+.dropdown-menu a{
+    text-decoration: none;
+    font-size: 11px;
+    color: black;
 }
 section{
     display: flex;
     flex-direction: row;
 }
 .menu_lateral{
-    height: 100vh;
-    width: 234px;
+    display: flex;
+    flex-direction: row;
+    height: 94.8vh;
+    width: 12.2%;
     background-color: #E0E0E0;
+}
+.menu_lateral p{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.menu_lateral img{
+    height: 14px;
+    margin-left: 10px;
+    margin-top: 13px;
+}
+.principal{
+    width: 90%;
+    background-color:#EDF0EF;
+}
+.topo_tabela{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+}
+.topo_tabela p{
+    float: left;
+    font-size: 25px;
+    margin-left: 29px;
+}
+.topo_tabela a{
+    float: right;
+    background-color: #FEAA29;
+    border: none;
+    color: white;
+    margin-right: 29px;
+    width: 29px;
+    height: 29px;
+    border-radius: 8px;
+    font-size: 10px;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+table{
+    margin: auto;
+    background-color: #3C3A3C;
+    color: #FEFEFE;
+    width: 90%;
+    height: 29px;
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+    
+}
+td{
+   
 }
