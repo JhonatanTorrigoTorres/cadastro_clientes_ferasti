@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="./css/clientes.css">
-        <title>Clientes</title>
+        <link rel="stylesheet" href="./css/alterar.css">
+        <title>Alterar</title>
     </head>
     <body>
         <header>
@@ -32,26 +32,42 @@
             <div class="principal">
                 <div class="topo_tabela">
                     <p><b>Clientes</b></p>
-                    <a href=""><b>+</b></a>
+                    <a href="clientes.php"><img src="./img/seta_email.svg" alt="icone"></a>
                 </div>
                 <table>
                     <tr class="coluna">
-                        <td class="borda"><b>NOME COMPLETO</b></td>
-                        <td><b>CPF</b></td>
-                        <td><b>CELULAR</b></td>
-                        <td><b>E-MAIL</b></td>
-                        <td><b>STATUS</b></td>
-                        <td class="borda_final"><b>AÇÃO</b></td>
-                    </tr>
-                    <tr class="conteudo">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="botoes"><a href="alterar.php">Ver</a><button>x</button></td>
+                        <td><b>VER</b></td>
                     </tr>
                 </table>
+                <form action="" method="POST">
+                    <div>
+                        <label>Nome completo</label>
+                        <input type="text" name="nome">
+                        <label>Data de nascimento</label>
+                        <br>
+                        <input type="text" name="nascimento">
+                        <label>Gênero</label>
+                        <select name="genero">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+                        <label>CPF</label>
+                        <input type="text" name="cpf">
+                    </div>
+                    <div>
+                        <label>Celular</label>
+                        <input type="text" name="celular">
+                        <label>E-mail</label>
+                        <input type="email" name="email">
+                        <label>Senha</label>
+                        <input type="password" name="senha">
+                        <label>Status</label>
+                        <select name="status">
+                            <option value="Ativo">Ativo</option>
+                            <option value="Inativo">Inativo</option>
+                        </select>
+                    </div>
+                </form>
             </div>
         </section>
     </body>
