@@ -1,3 +1,16 @@
+<?php
+    $database = new mysqli("localhost", "root", "root", "cadastro_clientes");
+    $result = $database->query("select * from clientes");
+    while($cliente = $result->fetch_assoc()){
+        $listaClientes .= '<tr>
+            <td>'.$cliente['nome'].'</td>
+            <td>'.$cliente['cpf'].'</td>
+            <td>'.$cliente['celular'].'</td>
+            <td>'.$cliente['email'].'</td>
+            <td>'.$cliente['status'].'</td>
+        </tr>';
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -44,11 +57,7 @@
                         <td class="borda_final"><b>AÇÃO</b></td>
                     </tr>
                     <tr class="conteudo">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <?php echo $listaClientes;?>
                         <td class="botoes"><a href="alterar.php">Ver</a><button>x</button></td>
                     </tr>
                 </table>
