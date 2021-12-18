@@ -35,13 +35,21 @@
                     <a href=""><b>+</b></a>
                 </div>
                 <table>
-                    <tr>
+                    <tr class="coluna">
                         <td><b>NOME COMPLETO</b></td>
                         <td><b>CPF</b></td>
                         <td><b>CELULAR</b></td>
                         <td><b>E-MAIL</b></td>
                         <td><b>STATUS</b></td>
                         <td><b>AÇÃO</b></td>
+                    </tr>
+                    <tr>
+                        <td>Raissa Moraes</td>
+                        <td>Raissa Moraes</td>
+                        <td>Raissa Moraes</td>
+                        <td>Raissa Moraes</td>
+                        <td>Raissa Moraes</td>
+                        <td>Raissa Moraes</td>
                     </tr>
                 </table>
             </div>
