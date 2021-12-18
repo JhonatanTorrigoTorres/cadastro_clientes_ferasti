@@ -13,7 +13,7 @@ header{
     height: 50.47px;
 }
 .logo img{
-    width: 109px;
+    width: 50%;
     height: 37px;
     margin-left:25%;
     margin-top: 4.73px;
@@ -114,13 +114,55 @@ table{
     border-radius: 8px 8px 0 0;
 }
 form{
-    background-color: yellow;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
     width: 95%;
     margin: auto;
     display: flex;
     flex-direction: column;
+    font-size: 12px;
 }
-form div{
+form label{
+    margin-left: 5px;
+}
+form section{
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+form div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+form input, select{
+    width:100%;
+    height: 30px;
+    padding-left: 15px;
+    border: 1px solid #BCBDC7;
+    border-radius: 8px;
+    color: #A2A2A2;
+}
+#status{
+    color: black;
+}
+#salvar{
+    width: 132px;
+    height: 31px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background: #FEAA29;
+}
+.salvar{
+    display: flex;
+    flex-direction: row;
+    width:100% ;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.salvar div{
+    width: 90%;
 }

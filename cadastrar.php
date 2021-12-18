@@ -8,7 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="./css/alterar.css">
-        <title>Alterar</title>
+        <title>Cadastrar</title>
     </head>
     <body>
         <header>
@@ -36,7 +36,7 @@
                 </div>
                 <table>
                     <tr class="coluna">
-                        <td><b>VER</b></td>
+                        <td><b>CADASTRAR</b></td>
                     </tr>
                 </table>
                 <form action="" method="POST">
@@ -84,7 +84,7 @@
                     </section>
                     <div class="salvar">
                         <div></div>
-                        <input type="submit" value="Salvar" id="salvar">
+                        <input type="submit" value="Cadastrar" id="salvar">
                     </div>
                 </form>
             </div>

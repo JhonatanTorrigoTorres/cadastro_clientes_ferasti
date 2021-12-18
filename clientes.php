@@ -32,7 +32,7 @@
             <div class="principal">
                 <div class="topo_tabela">
                     <p><b>Clientes</b></p>
-                    <a href=""><b>+</b></a>
+                    <a href="cadastrar.php"><b>+</b></a>
                 </div>
                 <table>
                     <tr class="coluna">
