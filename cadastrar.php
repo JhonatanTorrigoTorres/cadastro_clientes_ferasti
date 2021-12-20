@@ -39,7 +39,7 @@
                         <td><b>CADASTRAR</b></td>
                     </tr>
                 </table>
-                <form action="" method="POST">
+                <form action="/cadastramento.php" method="post">
                     <section>
                         <div>
                             <label>Nome completo</label>

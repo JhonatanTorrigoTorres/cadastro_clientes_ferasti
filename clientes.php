@@ -3,15 +3,16 @@
     $result = $database->query("select * from clientes");
     while($cliente = $result->fetch_assoc()){
         $listaClientes .= '<tr>
-            <td>'.$cliente['nome'].'</td>
-            <td>'.$cliente['cpf'].'</td>
-            <td>'.$cliente['celular'].'</td>
-            <td>'.$cliente['email'].'</td>
-            <td>'.$cliente['status'].'</td>
+            <td class="tabela">'.$cliente['nome'].'</td>
+            <td class="tabela">'.$cliente['cpf'].'</td>
+            <td class="tabela">'.$cliente['celular'].'</td>
+            <td class="tabela">'.$cliente['email'].'</td>
+            <td class="tabela">'.$cliente['status'].'</td>
+            <td class="botoes"><a href="alterar.php">Ver</a><button>x</button></td>
         </tr>';
     }
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
@@ -56,9 +57,8 @@
                         <td><b>STATUS</b></td>
                         <td class="borda_final"><b>AÇÃO</b></td>
                     </tr>
-                    <tr class="conteudo">
+                    <tr>
                         <?php echo $listaClientes;?>
-                        <td class="botoes"><a href="alterar.php">Ver</a><button>x</button></td>
                     </tr>
                 </table>
             </div>

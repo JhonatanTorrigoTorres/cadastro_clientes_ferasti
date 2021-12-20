@@ -111,10 +111,8 @@ table{
 .borda_final{
     border-radius: 0 8px 0 0;
 }
-.conteudo{
-    background-color: #FFFFFF;
-}
-.conteudo td{
+.tabela, .botoes{
+    background-color:white;
     padding: 5px;
     align-items: center;
 }
