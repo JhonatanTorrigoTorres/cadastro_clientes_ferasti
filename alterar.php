@@ -1,3 +1,9 @@
+<?php
+    $database = new mysqli("localhost", "root", "root", "cadastro_clientes");
+    $result = $database->query("select * from clientes where id = ".$_GET['ciente_id']);
+    $cliente = $result->fetch_assoc();
+    print_r($resultado)
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -39,7 +45,7 @@
                         <td><b>VER</b></td>
                     </tr>
                 </table>
-                <form action="" method="POST">
+                <form action="alteracao.php" method="post">
                     <section>
                         <div>
                             <label>Nome completo</label>

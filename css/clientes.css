@@ -121,19 +121,23 @@ table{
     flex-direction: row;
     justify-content: space-around;
 }
-.botoes a{
+.alterar{
     width: 38px;
     height: 20px;
     font-size: 10px;
-    text-decoration: none;
     color: #FFFFFF;
     background-color:#FEAA29 ;
     border-radius: 8px;
     padding-top: 2px;
 }
-.botoes button{
+.deletar{
+    padding: 4px 8px 4px 8px;
     background-color: red;
     border: none;
     border-radius: 8px;
+    color: white;;
+}
+a:hover{
     color: white;
+    text-decoration: none;
 }

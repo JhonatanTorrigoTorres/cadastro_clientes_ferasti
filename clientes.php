@@ -8,7 +8,7 @@
             <td class="tabela">'.$cliente['celular'].'</td>
             <td class="tabela">'.$cliente['email'].'</td>
             <td class="tabela">'.$cliente['status'].'</td>
-            <td class="botoes"><a href="alterar.php">Ver</a><button>x</button></td>
+            <td class="botoes"><a class="alterar" href="alterar.php?clente_id='.$cliente['cliente_id'].'">Ver</a><a class="deletar" href="">x</a></td>
         </tr>';
     }
 ?>
