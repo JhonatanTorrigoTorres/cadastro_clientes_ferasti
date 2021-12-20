@@ -1,0 +1,126 @@
+body,html{
+    height: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo{
+    background-color: #3C3A3C;
+    width: 12%;
+    height: 50.47px;
+}
+.logo img{
+    width: 50%;
+    height: 37px;
+    margin-left:25%;
+    margin-top: 4.73px;
+}
+.dropdown{
+    height: 50.47px;
+}
+.dropdown button{
+    height: 34.25px;
+    width: 146.69px;
+    margin-right: 20px;
+    text-align: left;
+    font-size: 13px;
+    background-color: white;
+}
+.dropdown-menu{
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 17px;
+}
+.dropdown-menu a{
+    text-decoration: none;
+    font-size: 11px;
+    color: black;
+}
+section{
+    display: flex;
+    flex-direction: row;
+}
+.menu_lateral{
+    display: flex;
+    flex-direction: row;
+    height: 94.8vh;
+    width: 12.2%;
+    background-color: #E0E0E0;
+}
+.menu_lateral p{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.menu_lateral img{
+    height: 14px;
+    margin-left: 10px;
+    margin-top: 13px;
+}
+.principal{
+    width: 90%;
+    background-color:#EDF0EF;
+}
+.principal img{
+    transform: rotateY(180deg);
+    width: 8px;
+    height: 13px;
+}
+.topo_tabela{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+}
+.topo_tabela p{
+    float: left;
+    font-size: 25px;
+    margin-left: 29px;
+}
+.topo_tabela a{
+    float: right;
+    background-color: #FEAA29;
+    border: none;
+    color: white;
+    margin-right: 29px;
+    width: 29px;
+    height: 29px;
+    border-radius: 8px;
+    font-size: 10px;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+table{
+    width: 95%;
+    margin: auto;
+    font-size: 12px;
+}
+.coluna{
+    background-color: #3C3A3C;
+    color: #FEFEFE;
+    height: 29px;
+    align-items: center;
+}
+.coluna td{
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+}
+.conteudo{
+    padding: 5%;
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+.conteudo h2{
+    margin: auto;
+    color: green;
+}
