@@ -9,6 +9,7 @@
         '".$_POST['celular']."','".$_POST['email']."','".$_POST['senha']."','".$_POST['status']."')");
         header('location: clientes.php');
     }
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
