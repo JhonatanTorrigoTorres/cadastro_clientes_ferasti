@@ -1,6 +1,11 @@
 <?php
     include 'conexao.php';
+    include 'funcoes.php';
+
+    verificaSessao();
+
     $result = $database->query("select * from clientes");
+    
     while($cliente = $result->fetch_assoc()){
         $listaClientes .= '<tr>
             <td class="tabela">'.$cliente['nome'].'</td>
@@ -35,7 +40,7 @@
                     <b>Jhonatan Torres</b>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <a href="">Sair</a>
+                    <a href="deslogar.php">Sair</a>
                 </div>
             </div>
         </header>

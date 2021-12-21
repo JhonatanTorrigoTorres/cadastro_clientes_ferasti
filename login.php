@@ -12,7 +12,7 @@
         <main>
             <img src="./img/logo_horizonta_fundo_branco.png" alt="imagem" id="logo">
             <p><b>Bem-vindo</b></p>
-            <form name="formulario" action="autenticar.php" method="POST">
+            <form name="formulario" action="autenticar.php" method="post">
                 <label>E-mail</label>
                 <input type="email" name="email" id="email" placeholder="Insira seu login" />
                 <label>Senha</label>
