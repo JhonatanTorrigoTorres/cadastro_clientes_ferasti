@@ -1,5 +1,9 @@
 <?php
     include 'conexao.php';
+
+    $result_cpf = $database->query("select cpf from clientes");
+    $cpf_cadastrado = $result_cpf->fetch_assoc();
+
     if($_POST['nome'] != "" && $_POST['nascimento'] != "" && $_POST['genero'] != "" && $_POST['cpf'] != ""
     && $_POST['celular'] != "" && $_POST['email'] != "" && $_POST['senha'] != "" && $_POST['status'] != "")
     {
@@ -20,6 +24,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="./js/cadastrar.js"></script>
         <link rel="stylesheet" href="./css/alterar.css">
         <title>Cadastrar</title>
     </head>
@@ -52,7 +57,7 @@
                         <td><b>CADASTRAR</b></td>
                     </tr>
                 </table>
-                <form action="/cadastrar.php" method="post">
+                <form name="cadastrar" action="/cadastrar.php" method="post">
                     <section>
                         <div>
                             <label>Nome completo</label>
@@ -60,7 +65,7 @@
                         </div>
                         <div>
                             <label>Data de nascimento</label>
-                            <input type="text" name="nascimento">
+                            <input type="date" name="nascimento">
                         </div>
                         <div>
                             <label>Gênero</label>
@@ -99,7 +104,7 @@
                     </section>
                     <div class="salvar">
                         <div></div>
-                        <input type="submit" value="Cadastrar" id="salvar">
+                        <input type="submit" value="Cadastrar" id="salvar" onclick="return validar()">
                     </div>
                 </form>
             </div>
