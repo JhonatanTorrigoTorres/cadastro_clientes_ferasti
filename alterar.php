@@ -1,8 +1,9 @@
 <?php
     $database = new mysqli("localhost", "root", "root", "cadastro_clientes");
-    $result = $database->query("select * from clientes where id = ".$_GET['ciente_id']);
+    
+    $result = $database->query("select * from clientes where cliente_id = ".$_GET['cliente_id']);
     $cliente = $result->fetch_assoc();
-    print_r($resultado)
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,47 +50,49 @@
                     <section>
                         <div>
                             <label>Nome completo</label>
-                            <input type="text" name="nome">
+                            <input type="text" value="<?php echo $cliente['nome']; ?>" name="nome">
                         </div>
                         <div>
                             <label>Data de nascimento</label>
-                            <input type="text" name="nascimento">
+                            <input type="text" value="<?php echo $cliente['nascimento']; ?>" name="nascimento">
                         </div>
                         <div>
                             <label>Gênero</label>
-                            <select name="genero">
-                                <option value="Masculino">Masculino</option>
-                                <option value="Feminino">Feminino</option>
-                            </select>
+                            <input list="genero" value="<?php echo $cliente['genero']; ?>" name="genero">
+                            <datalist id="genero">
+                                <option value="Masculino">
+                                <option value="Feminino">
+                            </datalist>
                         </div>
                         <div>
                             <label>CPF</label>
-                            <input type="text" name="cpf">
+                            <input type="text" value="<?php echo $cliente['cpf']; ?>" name="cpf">
                         </div>
                     </section>
                     <section>
                         <div>
                             <label>Celular</label>
-                            <input type="text" name="celular">
+                            <input type="text" value="<?php echo $cliente['celular']; ?>" name="celular">
                         </div>
                         <div>
                             <label>E-mail</label>
-                            <input type="email" name="email">
+                            <input type="email" value="<?php echo $cliente['email']; ?>" name="email">
                         </div>
                         <div>
                             <label>Senha</label>
-                            <input type="password" name="senha">
+                            <input type="password" value="<?php echo $cliente['senha']; ?>" name="senha">
                         </div>
                         <div>
                             <label>Status</label>
-                            <select name="status" id="status">
-                                <option value="Ativo">Ativo</option>
-                                <option value="Inativo">Inativo</option>
-                            </select>
+                            <input list="status" value="<?php echo $cliente['status']; ?>" name="status">
+                            <datalist id="status">
+                                <option value="Ativo">
+                                <option value="Inativo">
+                            </datalist>
                         </div>
                     </section>
                     <div class="salvar">
-                        <div></div>
+                        <div><input type="hidden" name="cliente_id" value="<?php echo $cliente['cliente_id']; ?>"></div>
                         <input type="submit" value="Salvar" id="salvar">
                     </div>
                 </form>

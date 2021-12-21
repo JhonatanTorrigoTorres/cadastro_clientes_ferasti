@@ -1,3 +1,15 @@
+<?php
+    $database = new mysqli("localhost", "root", "root", "cadastro_clientes");
+    if($_POST['nome'] != "" && $_POST['nascimento'] != "" && $_POST['genero'] != "" && $_POST['cpf'] != ""
+    && $_POST['celular'] != "" && $_POST['email'] != "" && $_POST['senha'] != "" && $_POST['status'] != "")
+    {
+        $database->query("insert into clientes
+        (`nome`,`nascimento`,`genero`,`cpf`,`celular`,`email`,`senha`,`status`)
+        values ('".$_POST['nome']."','".$_POST['nascimento']."','".$_POST['genero']."','".$_POST['cpf']."',
+        '".$_POST['celular']."','".$_POST['email']."','".$_POST['senha']."','".$_POST['status']."')");
+        header('location: clientes.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -39,7 +51,7 @@
                         <td><b>CADASTRAR</b></td>
                     </tr>
                 </table>
-                <form action="/cadastramento.php" method="post">
+                <form action="/cadastrar.php" method="post">
                     <section>
                         <div>
                             <label>Nome completo</label>
@@ -51,10 +63,11 @@
                         </div>
                         <div>
                             <label>Gênero</label>
-                            <select name="genero">
-                                <option value="Masculino">Masculino</option>
-                                <option value="Feminino">Feminino</option>
-                            </select>
+                            <input list="genero" name="genero">
+                            <datalist id="genero">
+                                <option value="Masculino">
+                                <option value="Feminino">
+                            </datalist>
                         </div>
                         <div>
                             <label>CPF</label>
@@ -76,10 +89,11 @@
                         </div>
                         <div>
                             <label>Status</label>
-                            <select name="status" id="status">
-                                <option value="Ativo">Ativo</option>
-                                <option value="Inativo">Inativo</option>
-                            </select>
+                            <input list="status" name="status">
+                            <datalist id="status">
+                                <option value="Ativo">
+                                <option value="Inativo">
+                            </datalist>
                         </div>
                     </section>
                     <div class="salvar">
