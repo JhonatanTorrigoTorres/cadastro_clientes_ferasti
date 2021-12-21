@@ -4,7 +4,7 @@
     
     unset($_SESSION['usuario_logado']);
 
-    header('location:login.php');
+    header('location:login.html');
     
     
 ?>
