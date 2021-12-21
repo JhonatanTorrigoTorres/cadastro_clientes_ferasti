@@ -1,5 +1,5 @@
 <?php
-    $database = new mysqli("localhost", "root", "root", "cadastro_clientes");
+    include 'conexao.php';
     
     $result = $database->query("select * from clientes where cliente_id = ".$_GET['cliente_id']);
     $cliente = $result->fetch_assoc();

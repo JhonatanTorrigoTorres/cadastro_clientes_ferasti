@@ -1,6 +1,6 @@
 <?php
 
-    $database = new mysqli("localhost", "root", "root", "cadastro_clientes");
+    include 'conexao.php';
     
     $database->query("delete from clientes where cliente_id = ".$_GET['cliente_id']);
 

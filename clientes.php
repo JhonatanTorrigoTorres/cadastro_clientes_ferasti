@@ -1,5 +1,5 @@
 <?php
-    $database = new mysqli("localhost", "root", "root", "cadastro_clientes");
+    include 'conexao.php';
     $result = $database->query("select * from clientes");
     while($cliente = $result->fetch_assoc()){
         $listaClientes .= '<tr>
