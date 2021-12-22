@@ -6,19 +6,13 @@ function validar(){
     var email = cadastrar.email.value;
     var senha = cadastrar.senha.value;
     var status = cadastrar.status.value;
-    var data = new Date();
-    var dia = String(data.getDate()).padStart(2, '0');
-    var mes = String(data.getMonth() + 1).padStart(2, '0');
-    var ano = data.getFullYear();
-    dataAtual = dia + '/' + mes + '/' + ano;
-
     
-    if(nascimento == "" || nascimento == dataAtual){
-        alert('Data inválida');
-        formulario.nascimento.focus();
+    if(genero == ""){
+        alert('Selecione o Gênero');
+        formulario.genero.focus();
         return false;
     }
-
+    
     if(email == "" || email.indexOf('@') == -1){
         alert('E-mail incorreto! Tente novamente');
         formulario.email.focus();

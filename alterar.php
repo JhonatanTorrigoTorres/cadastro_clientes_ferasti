@@ -1,5 +1,8 @@
 <?php
     include 'conexao.php';
+    include 'funcoes.php';
+
+    verificaSessao();
     
     $result = $database->query("select * from clientes where cliente_id = ".$_GET['cliente_id']);
     $cliente = $result->fetch_assoc();
@@ -27,7 +30,7 @@
                     <b>Jhonatan Torres</b>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <a href="">Sair</a>
+                    <a href="deslogar.php">Sair</a>
                 </div>
             </div>
         </header>

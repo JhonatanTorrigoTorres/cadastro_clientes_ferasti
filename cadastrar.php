@@ -1,5 +1,8 @@
 <?php
     include 'conexao.php';
+    include 'funcoes.php';
+
+    verificaSessao();
 
     $result_cpf = $database->query("select cpf from clientes");
     $cpf_cadastrado = $result_cpf->fetch_assoc();
@@ -38,7 +41,7 @@
                     <b>Jhonatan Torres</b>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <a href="">Sair</a>
+                    <a href="deslogar.php">Sair</a>
                 </div>
             </div>
         </header>

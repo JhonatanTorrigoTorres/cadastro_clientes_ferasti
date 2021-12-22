@@ -3,7 +3,7 @@ function validar(){
     var senha = formulario.senha.value;
     var img = document.getElementById('icone');
     
-    if(email == "" || email.indexOf('@') == -1 ){
+    if(email == ""){
         alert('E-mail incorreto! Tente novamente');
         formulario.email.focus();
         return false;
