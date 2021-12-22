@@ -57,7 +57,7 @@
                         </div>
                         <div>
                             <label>Data de nascimento</label>
-                            <input type="date" value="<?php echo $cliente['nascimento']; ?>" name="nascimento">
+                            <input disabled type="text" value="<?php echo $cliente['nascimento']; ?>" name="nascimento">
                         </div>
                         <div>
                             <label>Gênero</label>

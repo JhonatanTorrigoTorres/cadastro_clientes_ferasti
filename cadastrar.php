@@ -3,11 +3,12 @@
     include 'funcoes.php';
 
     verificaSessao();
+    
+    
+    
 
-    $result_cpf = $database->query("select cpf from clientes");
-    $cpf_cadastrado = $result_cpf->fetch_assoc();
 
-    if($_POST['nome'] != "" && $_POST['nascimento'] != "" && $_POST['genero'] != "" && $_POST['cpf'] != ""
+    if($_POST['nome'] != "" && $_POST['nascimento'] != "" && $_POST['genero'] != "" && $_POST['cpf'] != "" 
     && $_POST['celular'] != "" && $_POST['email'] != "" && $_POST['senha'] != "" && $_POST['status'] != "")
     {
         $database->query("insert into clientes
@@ -15,7 +16,8 @@
         values ('".$_POST['nome']."','".$_POST['nascimento']."','".$_POST['genero']."','".$_POST['cpf']."',
         '".$_POST['celular']."','".$_POST['email']."','".$_POST['senha']."','".$_POST['status']."')");
         header('location: clientes.php');
-    }
+    } 
+    
     
 ?>
 <!DOCTYPE html>
@@ -68,7 +70,7 @@
                         </div>
                         <div>
                             <label>Data de nascimento</label>
-                            <input type="date" name="nascimento">
+                            <input type="text" name="nascimento">
                         </div>
                         <div>
                             <label>Gênero</label>
