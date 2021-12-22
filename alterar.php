@@ -69,7 +69,7 @@
                         </div>
                         <div>
                             <label>CPF</label>
-                            <input type="text" value="<?php echo $cliente['cpf']; ?>" name="cpf">
+                            <input disabled type="text" value="<?php echo $cliente['cpf']; ?>" name="cpf">
                         </div>
                     </section>
                     <section>
