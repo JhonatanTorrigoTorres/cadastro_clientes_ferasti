@@ -57,7 +57,7 @@
                         </div>
                         <div>
                             <label>Data de nascimento</label>
-                            <input disabled type="text" value="<?php echo $cliente['nascimento']; ?>" name="nascimento">
+                            <input type="text" value="<?php echo $cliente['nascimento']; ?>" name="nascimento">
                         </div>
                         <div>
                             <label>Gênero</label>
@@ -69,7 +69,7 @@
                         </div>
                         <div>
                             <label>CPF</label>
-                            <input disabled type="text" value="<?php echo $cliente['cpf']; ?>" name="cpf">
+                            <input type="text" value="<?php echo $cliente['cpf']; ?>" name="cpf">
                         </div>
                     </section>
                     <section>
