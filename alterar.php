@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="./js/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
         <link rel="stylesheet" href="./css/alterar.css">
         <title>Alterar</title>
     </head>
@@ -53,53 +54,73 @@
                     <section>
                         <div>
                             <label>Nome completo</label>
-                            <input type="text" value="<?php echo $cliente['nome']; ?>" name="nome">
+                            <input type="text" value="<?php echo $cliente['nome']; ?>" name="nome" class="disabled" >
                         </div>
                         <div>
                             <label>Data de nascimento</label>
-                            <input type="text" value="<?php echo $cliente['nascimento']; ?>" name="nascimento">
+                            <input type="text" value="<?php echo $cliente['nascimento']; ?>" name="nascimento" class="nascimento disabled">
                         </div>
                         <div>
                             <label>Gênero</label>
-                            <input list="genero" value="<?php echo $cliente['genero']; ?>" name="genero">
-                            <datalist id="genero">
-                                <option value="Masculino">
-                                <option value="Feminino">
-                            </datalist>
+                            <select name="genero" class="disabled">
+                                <option><?php echo $cliente['genero']; ?></option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                            </select>
                         </div>
                         <div>
                             <label>CPF</label>
-                            <input type="text" value="<?php echo $cliente['cpf']; ?>" name="cpf">
+                            <input type="text" value="<?php echo $cliente['cpf']; ?>" name="cpf" class="cpf disabled">
                         </div>
                     </section>
                     <section>
                         <div>
                             <label>Celular</label>
-                            <input type="text" value="<?php echo $cliente['celular']; ?>" name="celular">
+                            <input type="text" value="<?php echo $cliente['celular']; ?>" name="celular" class="celular disabled">
                         </div>
                         <div>
                             <label>E-mail</label>
-                            <input type="email" value="<?php echo $cliente['email']; ?>" name="email">
+                            <input type="email" value="<?php echo $cliente['email']; ?>" name="email" class="disabled">
                         </div>
                         <div>
                             <label>Senha</label>
-                            <input type="password" value="<?php echo $cliente['senha']; ?>" name="senha">
+                            <input type="password" value="<?php echo $cliente['senha']; ?>" name="senha" class="disabled">
                         </div>
                         <div>
                             <label>Status</label>
-                            <input list="status" value="<?php echo $cliente['status']; ?>" name="status">
-                            <datalist id="status">
-                                <option value="Ativo">
-                                <option value="Inativo">
-                            </datalist>
+                            <select name="status" class="disabled">
+                                <option><?php echo $cliente['status']; ?></option>
+                                <option value="Ativo">Ativo</option>
+                                <option value="Inativo">Inativo</option>
+                            </select>
                         </div>
                     </section>
                     <div class="salvar">
                         <div><input type="hidden" name="cliente_id" value="<?php echo $cliente['cliente_id']; ?>"></div>
                         <input type="submit" value="Salvar" id="salvar">
+                        <button type="button" value="Alterar" id="alterar">Alterar</button>
                     </div>
                 </form>
             </div>
         </section>
+        <script>
+        $('input, select').attr('disabled', true);
+        $('#salvar').hide();
+
+        $('#alterar').click(function(e) {
+            e.preventDefault();
+            $('input, select').removeAttr('disabled');
+            $('input, select').removeClass('disabled');
+            $('#alterar').hide();
+            $('#salvar').show();
+            // $('#status').prop('disabled', true);
+            // $('#status').addClass('disabled');
+        });
+        $(document).ready(function() {
+            $('.nascimento').mask('00/00/0000');
+            $('.cpf').mask('000.000.000-00');
+            $('.celular').mask('(00) 00000-0000');
+        });
+        </script>
     </body>
 </html>
